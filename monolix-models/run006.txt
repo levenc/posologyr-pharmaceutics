@@ -1,0 +1,29 @@
+DESCRIPTION:
+This PK model has a double extravascular absorption composed of
+a zero-order absorption (duration Tk01, fraction F1),
+and a simultaneous first-order absorption (rate constant ka2, fraction 1-F1).
+The PK model has a central compartment (volume V) and a linear elimination (clearance Cl).
+
+[LONGITUDINAL]
+input = {D2, Ka, F1, Vc, Cl}
+
+EQUATION:
+odeType=stiff
+
+; Parameter transformations
+Tk01 = D2
+ka2 = Ka
+V = Vc
+k = Cl/V
+
+PK:
+
+;PK model definition
+compartment(cmt = 1, volume = V, concentration =  Cc)
+absorption(cmt = 1, Tk0 = Tk01, p = F1)
+absorption(cmt = 1, ka = ka2, p = 1-F1)
+elimination(cmt = 1, k)
+
+OUTPUT:
+output = Cc
+

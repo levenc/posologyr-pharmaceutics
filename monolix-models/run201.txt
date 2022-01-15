@@ -1,0 +1,19 @@
+DESCRIPTION:
+The administration is extravascular with a first order absorption (rate constant ka).
+The PK model has one compartment (volume V) and a Michaelis-Menten elimination (Vm, Km).
+
+
+[LONGITUDINAL]
+input = {Ka, Vc, Vmax, Km}
+
+EQUATION:
+odeType = stiff
+
+ka = Ka
+V = Vc
+Vm = Vmax
+; PK model definition
+Cc = pkmodel(ka, V, Vm, Km)
+
+OUTPUT:
+output = Cc

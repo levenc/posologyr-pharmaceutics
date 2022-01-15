@@ -1,0 +1,5 @@
+parameter,statistics,p-value,test
+ALAG,0.955283,0.999995,Shapiro-Wilk
+Ka,0.952481,0.680979,Shapiro-Wilk
+Vc,0.943075,0.0391113,Shapiro-Wilk
+Cl,0.967177,0.999998,Shapiro-Wilk

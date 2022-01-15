@@ -1,0 +1,79 @@
+<DATAFILE>
+
+[FILEINFO]
+file='../posologyr-data-dist/data_to_fit201_dist.csv'
+delimiter = comma
+header = {ID, time, evid, amt, cmt, ii, addl, mdv, DV, s2_sampling}
+
+[CONTENT]
+ID = {use=identifier}
+time = {use=time}
+evid = {use=eventidentifier}
+amt = {use=amount}
+ii = {use=interdoseinterval}
+addl = {use=additionaldose}
+mdv = {use=missingdependentvariable}
+DV = {use=observation, name=DV, type=continuous}
+
+<MODEL>
+
+[INDIVIDUAL]
+input = {Km_pop, omega_Km, Ka_pop, omega_Ka, Vc_pop, omega_Vc, Vmax_pop, omega_Vmax}
+
+DEFINITION:
+Km = {distribution=logNormal, typical=Km_pop, sd=omega_Km}
+Ka = {distribution=logNormal, typical=Ka_pop, sd=omega_Ka}
+Vc = {distribution=logNormal, typical=Vc_pop, sd=omega_Vc}
+Vmax = {distribution=logNormal, typical=Vmax_pop, sd=omega_Vmax}
+
+[LONGITUDINAL]
+input = {b}
+
+file = 'run201.txt'
+
+DEFINITION:
+DV = {distribution=normal, prediction=Cc, errorModel=proportional(b)}
+
+<FIT>
+data = DV
+model = DV
+
+<PARAMETER>
+Ka_pop = {value=1, method=FIXED}
+Km_pop = {value=2500, method=FIXED}
+Vc_pop = {value=70, method=FIXED}
+Vmax_pop = {value=10000, method=FIXED}
+b = {value=0.05, method=FIXED}
+omega_Ka = {value=0.4472136, method=FIXED}
+omega_Km = {value=0.4472136, method=FIXED}
+omega_Vc = {value=0.4472136, method=FIXED}
+omega_Vmax = {value=0.4472136, method=FIXED}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = conditionalMean)
+fim(run = false,method = StochasticApproximation)
+logLikelihood(run = false,method = ImportanceSampling)
+plotResult(run = false,method = {indfits, parameterdistribution, covariancemodeldiagnosis, covariatemodeldiagnosis, obspred, vpc, residualsscatter, residualsdistribution, randomeffects, saemresults })
+
+[SETTINGS]
+GLOBAL:
+exportpath = 'run201'
+
+POPULATION:
+smoothingautostop = no
+burniniterations = 1
+smoothingiterations = 0
+exploratoryiterations = 1
+simulatedannealing = no
+simulatedannealingiterations = 1
+exploratoryinterval = 1
+
+INDIVIDUAL:
+enablemaxiterations = yes
+maxiterations = 11000
+nbsimulatedparameters = 10000
+ratio = 0.0001
+

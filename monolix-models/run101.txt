@@ -1,0 +1,25 @@
+DESCRIPTION:
+The administration is extravascular with a first order absorption (rate constant ka).
+The PK model has a central compartment (volume V1), a peripheral compartment 
+(volume V2, intercompartmental clearance Q), and a linear elimination (clearance Cl).
+
+
+[LONGITUDINAL]
+input = {Ka, Cl, Vc, Q, Vp}
+
+EQUATION:
+
+; Parameter transformations
+ka = Ka
+V1 = Vc
+V2 = Vp
+V = V1
+k = Cl/V1 
+k12 = Q/V1 
+k21 = Q/V2
+
+; PK model definition
+Cc = pkmodel(ka, V, k, k12, k21)
+
+OUTPUT:
+output = Cc

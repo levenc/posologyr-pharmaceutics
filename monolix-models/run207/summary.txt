@@ -1,0 +1,58 @@
+********************************************************************************
+*                         run207.mlxtran                                       *
+*                         January 11, 2022 at 21:32:02                         *
+*                         Monolix version : 2020R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+Ka_pop     :                             1
+Vc_pop     :                            70
+Vmax_pop   :                          1e+4
+Km_pop     :                        2.5e+3
+Cl_pop     :                             4
+
+Standard Deviation of the Random Effects -
+omega_Ka   :                         0.447
+omega_Vc   :                         0.447
+omega_Vmax :                         0.447
+omega_Km   :                         0.447
+omega_Cl   :                         0.447
+
+Error Model Parameters -------------------
+b          :                          0.05
+
+Elapsed time (seconds) :    0.63
+CPU time     (seconds) :       1
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+             min        Q1    median        Q3       max
+Ka   :      0.52     0.994       1.1       1.2      1.93
+Vc   :      50.6      61.5      72.9      96.6       110
+Vmax :   8.38e+3   9.07e+3   1.15e+4   1.35e+4   1.56e+4
+Km   :   1.73e+3   2.25e+3    2.5e+3    3.1e+3   3.32e+3
+Cl   :      3.16      3.34      4.85      5.64       6.7
+
+Elapsed time (seconds) :  3.5e+3
+CPU time     (seconds) :  9.4e+3
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+DATASET INFORMATION
+Number of individuals: 20
+Number of observations (DV): 50
+Number of doses: 100
+

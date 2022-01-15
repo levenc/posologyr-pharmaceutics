@@ -1,0 +1,11 @@
+parameter,value
+Ka_pop,1
+Cl_pop,4
+Vc_pop,70
+Q_pop,4
+Vp_pop,50
+omega_Ka,0.4472136
+omega_Cl,0.4472135955
+omega_Vc,0.4472136
+omega_Vp,0.4472136
+b,0.05

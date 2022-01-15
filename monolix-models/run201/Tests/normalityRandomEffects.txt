@@ -1,0 +1,5 @@
+eta,statistics,p-value
+eta_Ka,0.956321,1
+eta_Vc,0.953454,0.522694
+eta_Vmax,0.954029,0.555271
+eta_Km,0.952573,0.931336

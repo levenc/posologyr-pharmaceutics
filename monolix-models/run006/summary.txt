@@ -1,0 +1,57 @@
+********************************************************************************
+*                         run006.mlxtran                                       *
+*                         January 13, 2022 at 17:44:34                         *
+*                         Monolix version : 2020R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+D2_pop   :                               4
+Ka_pop   :                               1
+F1_pop   :                             0.8
+Vc_pop   :                              70
+Cl_pop   :                               4
+
+Standard Deviation of the Random Effects -
+omega_D2 :                           0.447
+omega_Ka :                           0.447
+omega_Vc :                           0.447
+omega_Cl :                           0.447
+
+Error Model Parameters -------------------
+b        :                            0.05
+
+Elapsed time (seconds) :   0.035
+CPU time     (seconds) :       0
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+           min        Q1    median        Q3       max
+D2 :      2.24       3.9      4.44      4.66      8.96
+Ka :     0.614       1.1      1.11      1.26      1.73
+F1 :       0.8       0.8       0.8       0.8       0.8
+Vc :      48.8      64.6      78.4      84.7       120
+Cl :      1.71      3.45      4.42      5.36      8.94
+
+Elapsed time (seconds) :      62
+CPU time     (seconds) :      88
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+DATASET INFORMATION
+Number of individuals: 20
+Number of observations (DV): 50
+Number of doses: 100
+

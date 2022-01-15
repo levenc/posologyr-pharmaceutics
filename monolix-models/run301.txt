@@ -1,0 +1,27 @@
+DESCRIPTION:
+The administration is extravascular with a first order absorption (rate constant ka).
+The PK model has one compartment (volume V) and a linear elimination (clearance Cl).
+
+
+[LONGITUDINAL]
+input = {Ka, Vc, Cl, BW, SEX}
+
+BW  = {use=regressor}
+SEX = {use=regressor}
+
+PK:
+depot(target=depot)
+
+EQUATION:
+odeType = stiff
+
+; PK model definition
+TV_Cl = Cl*((BW/75)^1.5)*(0.75^SEX)
+Ke      = TV_Cl/Vc
+Cc      = centr/Vc
+
+ddt_depot  = - Ka*depot
+ddt_centr   =   Ka*depot - Ke*centr
+
+OUTPUT:
+output = Cc

@@ -1,0 +1,18 @@
+DESCRIPTION:
+The administration is extravascular with a first order absorption (rate constant ka) and a lag time (Tlag).
+The PK model has one compartment (volume V) and a linear elimination (clearance Cl).
+
+
+[LONGITUDINAL]
+input = {ALAG, Ka, Vc, Cl}
+
+EQUATION:
+
+; PK model definition
+Tlag=ALAG
+ka=Ka
+V=Vc
+Cc = pkmodel(Tlag, ka, V, Cl)
+
+OUTPUT:
+output = Cc

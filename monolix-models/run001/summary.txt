@@ -1,0 +1,52 @@
+********************************************************************************
+*                         run001.mlxtran                                       *
+*                         January 11, 2022 at 17:22:50                         *
+*                         Monolix version : 2020R1                             *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------
+Ka_pop   :                               1
+Vc_pop   :                              70
+Cl_pop   :                               4
+
+Standard Deviation of the Random Effects -
+omega_Ka :                           0.447
+omega_Vc :                           0.447
+omega_Cl :                           0.447
+
+Error Model Parameters -------------------
+b        :                            0.05
+
+Elapsed time (seconds) :   0.019
+CPU time     (seconds) :       0
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+           min        Q1    median        Q3       max
+Ka :     0.485      1.02       1.1      1.23      1.71
+Vc :      48.5      68.4        74      83.1       110
+Cl :      1.82      3.37      4.64      5.77      8.65
+
+Elapsed time (seconds) :      70
+CPU time     (seconds) :      82
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+DATASET INFORMATION
+Number of individuals: 20
+Number of observations (DV): 50
+Number of doses: 100
+

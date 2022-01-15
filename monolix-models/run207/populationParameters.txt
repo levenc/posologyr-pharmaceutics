@@ -1,0 +1,12 @@
+parameter,value
+Ka_pop,1
+Vc_pop,70
+Vmax_pop,10000
+Km_pop,2500
+Cl_pop,4
+omega_Ka,0.4472135955
+omega_Vc,0.4472135955
+omega_Vmax,0.4472135955
+omega_Km,0.4472135955
+omega_Cl,0.4472135955
+b,0.05

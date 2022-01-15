@@ -1,0 +1,18 @@
+[LONGITUDINAL]
+input = {Ka, Vc, Vmax, Km, Cl}
+
+PK:
+depot(target=depot)
+
+EQUATION:
+odeType = stiff
+
+; PK model definition
+Ke    = Cl/Vc
+Cc    = centr/Vc
+
+ddt_depot  = - Ka*depot
+ddt_centr   =   Ka*depot - Vmax*(centr/Vc)/(Km+(centr/Vc)) - Ke*centr
+
+OUTPUT:
+output = Cc

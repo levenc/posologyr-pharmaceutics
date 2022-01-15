@@ -1,0 +1,7 @@
+eta1,eta2,coeff,statistics,p-value
+eta_Ka,eta_Vc,0,-0.814537,0.42543
+eta_Ka,eta_Vmax,0,-1.04525,0.309026
+eta_Ka,eta_Km,0,0.53148,0.601245
+eta_Vc,eta_Vmax,0,0.29704,0.769659
+eta_Vc,eta_Km,0,-0.575722,0.57156
+eta_Vmax,eta_Km,0,0.779481,0.445298
