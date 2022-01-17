@@ -1,3 +1,6 @@
+# data_to_fitXXX.csv files and  *.ofv files
+# from: https://github.com/FelicienLL/mapbayr-CPTPSP-2021
+
 # libraries --------------------------------------------------------------------
 library(posologyr)
 library(readr)
